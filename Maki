@@ -1,1 +1,9 @@
-Hello
+ATM process
+
+1. Insert Card
+2. Select Language
+3. Enter PIN
+4. Withdraw       |  Deposit        |  Check balance
+5. Select amount  |  Select amount  |  Confirm / Print
+6. Confirm / Print / Cancle
+7. Remove Card & Cash / Receipt
