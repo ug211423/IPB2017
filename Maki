@@ -7,3 +7,50 @@ ATM process
 5. Select amount  |  Select amount  |  Confirm / Print
 6. Confirm / Print / Cancle
 7. Remove Card & Cash / Receipt
+
+
+ATM code
+
+balance=1000
+print("-------| ATM |-------")
+for i in range (1,3):
+  PIN=int(input("Enter PIN:"))
+  if PIN == (1234):
+    print("""
+    |1|  Withdraw 
+    |2|  Deposit 
+    |3|  Balance
+    """)
+    Option=int(input("Please select:"))
+   
+    if Option==1:
+      print("Your balance is",balance, "PLN")
+      withdraw=float(input("How much you want to withdraw:"))
+      if withdraw>=0:
+        if withdraw<=balance:
+          balance=(balance-withdraw)
+          print("You have withdrawn", withdraw, "PLN")
+          print("Your balance now is", balance, "PLN")
+        else:
+          print("You don't have enough cash")
+      else:
+        print("------| ERROR |------")
+   
+    if Option==2:
+      print("Your balance is",balance, "PLN")
+      deposit=float(input("How much you want to deposit:"))
+      if deposit>=0:
+        balance=(balance+deposit)
+        print("You have deposit", deposit, "PLN")
+        print("Your balance now is", balance, "PLN")
+      else:
+        print("------| ERROR |------")  
+    
+    if Option==3:
+      print("Your balance is",balance, "PLN")
+
+    else:
+      print("------| ERROR |------")
+    
+  else:
+    print("----| Wrong PIN |----")
